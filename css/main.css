@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: #939185;
+
+}
+
+hr {
+    border: none;
+    border-top: 3px dotted #2F3645;
+
+    height: 1px;
+    width: 80%;
+}
+
+
+
+.main {
+    padding: 50px 0px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #2F3645;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #E6B9A6;
+    transition: height 350ms;
+    z-index: -1;
+}
+h1:hover:before {
+    height: 40px;
+}
+h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #E6B9A6, #EEEDEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.modal-p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.form-control:focus {
+    border-color: #2F3645;
+    box-shadow: 0 0 0 5px #E6B9A6;
+}
+.invalid:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 0 4px #ff00002b;
+    background-image: url(../download.svg);
+    background-repeat: no-repeat;
+    background-size: 2%;
+    background-position:right;
+}
+.invalid{
+    border-color: #dc3545;
+}
+.valid{
+    border-color: #198754;
+}
+.valid:focus{
+    border-color: #198754;
+    box-shadow: 0 0 0 4px #21890538;
+    background-image: url(../download2.svg);
+    background-repeat: no-repeat;
+    background-size: 2%;
+    background-position:right;
+}
+
+
+::selection {
+    background: #E6B9A6;
+}
+
+
+.modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    /* --bs-backdrop-bg: #000;
+    --bs-backdrop-opacity: 0.5; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+}
+
+.modal-backdrop.show {
+    opacity: none;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container d-flex justify-content-center align-items-center flex-column">
+            <h1 class=" text-capitalize position-relative py-2">bookmarker</h1>
+            <hr>
+            <form action="
+            " class="d-flex w-100 justify-content-center align-items-center flex-column p-3 py-4 " id="validationForm">
+
+                <h2> <i class="fa-solid fa-bookmark p-1 "></i>bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark "></i></h2>
+                <div class="mb-3 w-100">
+                    <label for="exampleFormControlInput1" class="form-label"><i
+                            class="fa-solid fa-book-bookmark p-1"></i>site name</label>
+                    <input type="name" class="form-control" id="productName" placeholder="bookmark name">
+                </div>
+                <div class="mb-3 w-100">
+                    <label for="exampleFormControlInput1" class="form-label"><i class="fa-solid fa-link p-1"></i>site
+                        url</label>
+                    <input type="url" class="form-control" id="prouductLink" placeholder="website url">
+                </div>
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5">
+                                    <div class="circles d-flex">
+                                        <span class=" me-2"><i class="fa-solid fa-circle"
+                                                style="color: #ff3d3d;"></i></span>
+                                        <span class=" me-2"><i class="fa-solid fa-circle"
+                                                style="color: #FFD43B;"></i></span>
+                                        <span class=" me-2"><i class="fa-solid fa-circle"
+                                                style="color: #1bb139;"></i></span>
+
+                                    </div>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+
+                            </div>
+                            <div class="modal-body  " id="modalMessage">
+                                <p class="modal-p m-0 pb-2">
+                                    Site Name or Url is not valid, Please follow the rules below :
+                                </p>
+                                <p class="fs-5"><i class="fa-regular fa-circle-right p-1"
+                                        style="color: #d90808;"></i>Site name must contain at least 3 characters</p>
+                                <p class="fs-5"><i class="fa-regular fa-circle-right p-1"
+                                        style="color: #d90808;"></i>Site URL must be a valid one</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button onclick="validate()" type="button" class="btn btn-secondary">submit</button>
+            </form>
+
+
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">index</th>
+                        <th scope="col">website name</th>
+                        <th scope="col">visit</th>
+                        <th scope="col">delete</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <!-- <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td><a href=""></a> <button type="button" class="btn btn-secondary"><i class="fa-solid fa-eye"></i>visit</button>
+                        </td>
+                        <td> <button type="button" class="btn btn-secondary">delete</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
